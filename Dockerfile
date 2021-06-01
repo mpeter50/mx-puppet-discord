@@ -26,7 +26,7 @@ RUN chown node:node package.json package-lock.json
 
 USER node
 
-RUN npm install
+RUN npm install --build-from-source
 
 COPY tsconfig.json ./
 COPY src/ ./src/
